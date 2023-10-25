@@ -1,4 +1,31 @@
-.center-items {
-  display: grid;
-  place-items: center;
+@use'./abstracts' as *;
+
+.logo-main {
+  max-width: 8.3rem;
+}
+
+.button {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 2px;
+  color: $color-white;
+  font: $font-montserat-400-body-1;
+}
+
+.button_secondary {
+  background-color: $color-secondary;
+}
+
+.input-primary {
+  width: min(22.06rem, 100%);
+  border: none;
+  border-bottom: 1px solid $color-gray;
+  background-color: $color-primary;
+  font: $font-montserat-400-body-1;
+  color: $color-white;
+}
+
+.title-h3 {
+  font: $font-montserat-800;
+  margin: 0;
 }
