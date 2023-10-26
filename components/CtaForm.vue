@@ -39,6 +39,6 @@ div(class="cta-form")
 }
 
 .cta-form__button {
-  margin-top: 3.75rem;
+  margin-top: 3.125rem;
 }
 </style>
