@@ -1,3 +1,6 @@
 <template>
-  Hello World
+  <CtaForm />
 </template>
+<script>
+import CtaForm from '../components/CtaForm.vue';
+</script>

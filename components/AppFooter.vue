@@ -47,7 +47,7 @@ import SubscribeForm from './SubscribeForm';
 }
 
 .footer__contacts {
-  @media (min-width: 40rem) {
+  @media (min-width: $small) {
     margin-right: 4.875rem;
   }
 }

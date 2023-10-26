@@ -25,7 +25,15 @@
   color: $color-white;
 }
 
-.title-h3 {
-  font: $font-montserat-800;
+.title-h3, .title-h2 {
   margin: 0;
 }
+
+.title-h3 {
+  font: $font-montserat-800;
+}
+
+.title-h2 {
+  font: $font-montserat-800-h2;
+}
+
