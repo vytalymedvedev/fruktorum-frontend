@@ -23,10 +23,6 @@ footer(class="footer")
 import SubscribeForm from './SubscribeForm';
 </script>
 <style scoped lang="scss">
-.footer {
-  border-top: 1px solid $color-gray;
-}
-
 .footer__upper {
   display: flex;
   flex-direction: column;
