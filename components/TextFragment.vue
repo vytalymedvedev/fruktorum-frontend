@@ -1,6 +1,5 @@
 <template lang="pug">
 template(v-for="node in props.nodes")
-  template {{ console.log(node) }}
   template(v-if="node.type === 'text'") {{ node.data }}
   h2(v-if="node.name === 'h2'" class="title-h2 text-fragment__title")
     TextFragment(:nodes="node.children")
