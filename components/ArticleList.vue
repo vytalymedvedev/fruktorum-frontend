@@ -20,9 +20,13 @@ const props = defineProps({
 
 .article-list__items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.875rem;
   margin-top: 3.125rem;
+
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .article-item__title {

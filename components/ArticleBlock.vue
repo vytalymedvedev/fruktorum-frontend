@@ -29,7 +29,7 @@ const viewsCount = computed(() => `${props.views_count} прочитали ст�
   display: grid;
 
   @media (min-width: $small) {
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: center;
   }
@@ -38,18 +38,24 @@ const viewsCount = computed(() => `${props.views_count} прочитали ст�
 .article-block__title {
   font: $font-montserat-800-h1;
   color: $color-primary;
+  margin-top: 1.4rem;
+
+  @media (min-width: $small) {
+    margin-top: 0;
+  }
 }
 
 .article-block__image {
-  width: min(33.8125rem, 100%);
+  width: 100%;
   border-top-right-radius: 18vmin;
 }
 
 .article-details {
   margin-top: 1.875rem;
   display: grid;
-  grid-template-columns: 2% 98%;
-  gap: 0.5rem;
+  grid-template-columns: 1rem 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
   align-items: center;
   font: $font-montserat-400-body-2;
   color: $color-gray;
