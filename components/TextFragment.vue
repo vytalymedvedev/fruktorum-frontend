@@ -10,9 +10,9 @@ template(v-for="node in props.nodes")
     TextFragment(:nodes="node.children")
   footer(v-if="node.name === 'footer'" class="text-fragment__footer text-fragment__footer_default")
     TextFragment(:nodes="node.children")
-  ul(v-if="node.name === 'ul'" class="")
+  ul(v-if="node.name === 'ul'" class="text-fragment__list text-fragment__list_default")
     TextFragment(:nodes="node.children")
-  li(v-if="node.name === 'li'" class="")
+  li(v-if="node.name === 'li'" class="text-fragment__list-item text-fragment__list-item_default")
     TextFragment(:nodes="node.children")
 </template>
 <script setup>
@@ -48,5 +48,26 @@ const props = defineProps({
   margin-top: 1rem;
   width: min(16rem, 100%);
   word-break: break-word;
+}
+
+.text-fragment__list.text-fragment__list_default {
+  margin-top: 1rem;
+  font: $font-montserat-400-body-1;
+}
+
+.text-fragment__list-item.text-fragment__list-item_default {
+  list-style: none;
+}
+
+.text-fragment__list-item.text-fragment__list-item_default::before {
+  content: "";
+  background: $color-primary;
+  height: .4em;
+  width: .4em;
+  display: block;
+  transform: rotate(45deg);
+  left: -1em;
+  top: 0.9em;
+  position: relative;
 }
 </style>
