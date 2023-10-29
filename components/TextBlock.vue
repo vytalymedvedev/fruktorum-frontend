@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+div(class="text-fragment")
   TextFragment(:nodes="nodes")
 </template>
 <script setup>

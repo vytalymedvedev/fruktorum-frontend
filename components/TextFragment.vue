@@ -6,8 +6,10 @@ template(v-for="node in props.nodes")
     TextFragment(:nodes="node.children")
   p(v-if="node.name === 'p'" class="text-fragment__paragraph text-fragment__paragraph_default")
     TextFragment(:nodes="node.children")
-  blockquote(v-if="node.name === 'blockquote'" class="text-fragment__blockquote")
-    TextFragment(:nodes="node.children")
+  div(v-if="node.name === 'blockquote'" class="text-fragment__blockquote")
+    img(src="/icomoon-free_quotes-left.svg" class="text-fragment__blockquote-img")
+    blockquote
+      TextFragment(:nodes="node.children")
   footer(v-if="node.name === 'footer'" class="text-fragment__footer text-fragment__footer_default")
     TextFragment(:nodes="node.children")
   ul(v-if="node.name === 'ul'" class="text-fragment__list text-fragment__list_default")
@@ -34,9 +36,21 @@ const props = defineProps({
   margin-top: 1.25rem;
 }
 
+.text-fragment .text-fragment__blockquote {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+}
+
+.text-fragment__blockquote-img {
+  width: min(5rem, 100%);
+  margin-right: 2.25rem;
+}
+
 .text-fragment__blockquote .text-fragment__paragraph {
   font-style: italic;
   font-weight: 300;
+  margin-top: 0;
 }
 
 .text-fragment__footer {
