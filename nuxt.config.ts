@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [['@nuxtjs/google-fonts', {
-    families: {
-      Montserrat: [300, 400, 700],
-    },
-  }
-  ]],
+  modules: [
+    'vue3-carousel-nuxt',
+    ['@nuxtjs/google-fonts', {
+      families: {
+        Montserrat: [300, 400, 700],
+      },
+    }]
+  ],
   devtools: { enabled: true },
   vite: {
     css: {
