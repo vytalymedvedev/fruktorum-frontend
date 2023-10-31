@@ -5,13 +5,20 @@ div(class="article-list")
     div(v-for="item in props.articles" class="article-item")
       img(:src="item.image" class="article-item__image")
       h3(class="title-h3 article-item__title") {{ item.title }}
-      button(class="button button_primary article-item__button") Читать
+      button(
+        @click="onClick(item.link)"
+        class="button button_primary article-item__button"
+      ) Читать
 </template>
 <script setup>
 const props = defineProps({
   title: String,
   articles: Array
 })
+
+const onClick = async link => {
+  await navigateTo(link);
+}
 </script>
 <style scoped lang="scss">
 .article-list__title {
