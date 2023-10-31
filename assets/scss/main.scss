@@ -12,6 +12,10 @@
   font: $font-montserat-400-body-1;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .button_primary {
   background-color: $color-primary;
 }
