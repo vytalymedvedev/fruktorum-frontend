@@ -42,9 +42,17 @@ import { storeToRefs } from 'pinia';
 
 const route = useRoute();
 const store = useGeneralStore();
-const { getData } = store;
-const { blocks } = storeToRefs(store);
-getData(route.path);
+const { getPageData } = store;
+const { blocks, meta } = storeToRefs(store);
+
+getPageData(route.path);
+useHead({
+  title: meta.value.title,
+  meta: [
+    { name: 'description', content: meta.value.description },
+    { name: 'slug', content: meta.value.slug },
+  ]
+})
 
 </script>
 <style scoped lang="scss">
