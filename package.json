@@ -20,7 +20,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "html-dom-parser": "^5.0.3",
+    "pinia": "^2.1.7",
     "vue3-carousel-nuxt": "^1.1.0"
   }
 }
